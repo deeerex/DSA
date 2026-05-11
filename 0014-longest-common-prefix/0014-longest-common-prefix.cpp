@@ -1,7 +1,8 @@
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-
+        string out_str="";
+        vector<string>::iterator it;
         for (int i=0; i<strs[0].length(); i++)
         {
             char c = strs[0][i];
