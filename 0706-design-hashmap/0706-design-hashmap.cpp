@@ -1,26 +1,19 @@
 class MyHashMap {
+    int map[1000001];
 public:
-    MyHashMap() {
-        _map.fill(-1);
-    }
-
-    int hash(int key) {
-       return key % 100000;
-    }
+    MyHashMap() { memset(map, -1, sizeof(map)); }
     
     void put(int key, int value) {
-        _map[hash(key)] = value;
+        map[key] = value;
     }
     
     int get(int key) {
-        return _map[hash(key)] == -1 ? -1 : _map[hash(key)];
+        return map[key];
     }
     
     void remove(int key) {
-        _map[hash(key)] = -1;
+        map[key] = -1;
     }
-private:
-    array<int, 100000> _map;
 };
 
 /**
