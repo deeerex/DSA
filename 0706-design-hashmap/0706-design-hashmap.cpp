@@ -1,7 +1,7 @@
 class MyHashMap {
-    vector<int> map;
+    int map[1000001];
 public:
-    MyHashMap() : map(1000001, -1) {}
+    MyHashMap() { memset(map, -1, sizeof(map)); }
     
     void put(int key, int value) {
         map[key] = value;
@@ -15,7 +15,6 @@ public:
         map[key] = -1;
     }
 };
-
 /**
  * Your MyHashMap object will be instantiated and called as such:
  * MyHashMap* obj = new MyHashMap();
